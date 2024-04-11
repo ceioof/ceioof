@@ -23,18 +23,20 @@ body {
     font-weight: 700;
     font-style: normal;
   } */
-/*! sm mobile */
+/*! smart phone mobile */
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
 }
-/*! md mobile to 767px*/
+/*!max mobile to 767px* */
+/*! tablet */
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 }
+/* !max tablet 1023px */
 /*! L */
 @media (min-width: 992px) {
   .container {
@@ -99,6 +101,11 @@ body {
 /* ! end framework */
 
 /* start header + land */
+@media (max-width: 767px) {
+  header .container nav ul a {
+    font-size: 20px;
+  }
+}
 header {
   padding-left: 20px;
   padding-right: 20px;
@@ -230,7 +237,7 @@ section.motivate .content {
   grid-template-columns: 1fr 1fr;
   margin-left: 30px;
   /* margin-right: -20px; تحت التجربه */
-  padding-right: -20px;
+  padding-right: 20px;
 }
 .motivate .col .txt {
   padding: 100px 5px 0 100px; /* top right bottom left*/
