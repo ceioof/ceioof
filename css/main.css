@@ -1,7 +1,7 @@
 /* global rules */
 :root {
   --id-clr: #ffb441;
-  --secondary: #474644;
+  --sec-color: #474644;
   --second-clr: #f6f6f6;
   --special-head: #b0b0b0;
   --sec-col1: #fef4f3;
@@ -123,7 +123,7 @@ header .container nav:hover ul {
   display: block;
 }
 
-header .container nav span i {
+header .container nav span svg {
   color: var(--id-clr);
   width: 20px;
 
@@ -135,7 +135,7 @@ header .container nav ul::before {
   content: "";
   width: 0;
   height: 0;
-  border-color: transparent transparent var(--secondary) transparent;
+  border-color: transparent transparent var(--sec-color) transparent;
   border-style: solid solid solid solid;
   border-width: 10px;
   position: absolute;
@@ -148,7 +148,7 @@ header .container nav ul {
   margin: 0;
 
   width: 200px;
-  background-color: var(--secondary, black);
+  background-color: var(--sec-color, black);
   color: var(--id-clr);
   display: flex;
   flex-direction: column;
@@ -216,7 +216,7 @@ header .container .logo {
   width: 25px;
   padding-left: 4px;
 }
-.landing .container .btn .icon i {
+.landing .container .btn .icon svg {
   color: var(--id-clr);
 }
 .landing .container button.join:active {
@@ -263,7 +263,7 @@ header .container .logo {
 .features .container .featur-content .feat p {
   line-height: 1.5;
 }
-.features .container .featur-content .feat i {
+.features .container .featur-content .feat svg {
   color: var(--id-clr);
   font-size: 30px;
 }
@@ -308,7 +308,7 @@ section.motivate .content {
   background-color: #474644;
   width: 25px;
 }
-.motivate .col .txt .btn .icon i {
+.motivate .col .txt .btn .icon svg {
   color: white;
   padding-left: 5px;
 }
@@ -385,7 +385,7 @@ section.motivate .content {
     text-align: center;
   }
   .programs-content .col-txt.orange._2 {
-    background-color: var(--secondary);
+    background-color: var(--sec-color);
   }
   .programs-content .col-txt.black._2 {
     background-color: var(--id-clr);
