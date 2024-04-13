@@ -16,13 +16,13 @@ html {
 body {
   font-family: "Play", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  /* font-style: normal; */
 }
 /* .play-bold {
-    font-family: "Play", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  } */
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
 /*! smart phone mobile */
 @media (min-width: 576px) {
   .container {
@@ -101,57 +101,96 @@ body {
 /* ! end framework */
 
 /* start header + land */
-@media (max-width: 767px) {
-  header .container nav ul a {
-    font-size: 20px;
-  }
-}
 header {
-  padding-left: 20px;
-  padding-right: 20px;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  /* opacity: 0.5; */
 }
 header .container {
   padding: 20px;
   display: flex;
-
   justify-content: space-between;
-  height: calc(100% - 40px);
+  height: calc(100% - 40px); /*40 [x بتاعت البادينج*/
+}
+header .container nav {
+  position: relative;
+}
+header .container nav span {
+  text-align: center;
+}
+header .container nav:hover ul {
+  display: block;
+}
+
+header .container nav span i {
+  color: var(--id-clr);
+  width: 20px;
+
+  font-size: 25px;
+  position: absolute;
+  right: 0;
+}
+header .container nav ul::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-color: transparent transparent var(--secondary) transparent;
+  border-style: solid solid solid solid;
+  border-width: 10px;
+  position: absolute;
+  right: 0px;
+  top: -19px;
 }
 header .container nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  width: 200px;
+  background-color: var(--secondary, black);
+  color: var(--id-clr);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  /* flex-direction: row-reverse; */
+  position: absolute;
+  right: 5px;
+  top: 35px;
+  display: none;
+  z-index: 1000;
 }
 header .container nav ul li {
-  padding: 10px;
-  padding-right: 15px;
-  /* margin-left: 15px; */
+  padding: 20px;
+  border-bottom: 1px solid var(--special-head);
 }
-header .container nav ul li:hover {
-  background-color: var(--id-clr);
+header .container nav ul li:last-child {
+  border-bottom: 0 solid var(--special-head);
 }
 
+header .container nav ul li:hover {
+  padding-left: 30px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+header .container nav ul li:hover a {
+  color: var(--id-clr);
+}
 header .container nav ul a {
   text-decoration: none;
   color: white;
   font-size: 20px;
 }
-/* ! */
-header .container nav ul li:hover a {
-  /* color: var(--id-clr); */
-  /* padding-top: 20px; */
-}
-/* ! under test */
 
 header .container .logo {
-  font-size: 30px;
-  color: var(--id-clr);
+  font-size: 25px;
+  color: var(--sec-col1);
 }
 .landing .container {
   margin-top: 200px;
+  padding: 0 20px;
 }
 
 .landing .container h1:first-child {
@@ -162,7 +201,7 @@ header .container .logo {
 }
 .landing .container .txt-lnd {
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .landing .container button.join {
   border: none;
@@ -195,6 +234,8 @@ header .container .logo {
 @media (max-width: 768px) {
   .land-photo {
     background-position: center;
+  }
+  header nav {
   }
 }
 /*! end header + land */
@@ -286,7 +327,7 @@ section.motivate .content {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding: 100px 0 100px 20px;
   }
   .motivate .image {
     display: none;
