@@ -1,5 +1,6 @@
 /* global rules */
 :root {
+<<<<<<< HEAD
   --orange-color: #ffb441;
   --gray-color: #474644;
   --section-color: #f6f6f6;
@@ -68,12 +69,22 @@
 /*TODO: _________end fonts______ */
 
 /* * refer to all element */
+=======
+  --id-clr: #ffb441;
+  --sec-color: #474644;
+  --second-clr: #f6f6f6;
+  --special-head: #b0b0b0;
+  --sec-col1: #fef4f3;
+  --pdn-mgn: 20px;
+}
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 * {
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
 }
+<<<<<<< HEAD
 
 ::selection {
   background-color: var(--orange-color);
@@ -88,6 +99,18 @@ body {
   font-size: 2em;
   font-style: normal;
 }
+=======
+body {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  /* font-style: normal; */
+}
+/* .play-bold {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 /*! smart phone mobile */
 @media (min-width: 576px) {
   .container {
@@ -114,26 +137,46 @@ body {
     max-width: 1140px;
   }
 }
+<<<<<<< HEAD
+=======
+/* !for any container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 /* ___________________________________________ */
 /*? special heading */
 /*! special heading */
 /** special heading */
 .special-heading {
+<<<<<<< HEAD
   color: var(--orange-color);
+=======
+  color: var(--id-clr);
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
   font-size: 30px;
   text-align: center;
   margin: 0;
   padding-top: 40px;
+<<<<<<< HEAD
 
   font-family: var(--header-font);
   font-weight: var(--header-fontWeight);
   font-style: var(--header-fontStyle);
+=======
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 }
 .special-heading + p {
   text-align: center;
   line-height: 1.5;
   text-wrap: wrap;
+<<<<<<< HEAD
   margin-top: 15px;
+=======
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 }
 /* ____________________________________________ */
 /*! end global rules */
@@ -142,19 +185,40 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
+<<<<<<< HEAD
 
+=======
+.flex-cntr {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 .none {
   list-style: none;
   border: none;
   text-decoration: none;
 }
+<<<<<<< HEAD
 
+=======
+.mgn.pdn {
+  margin: 0;
+  padding: 0;
+}
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 /* ! end framework */
 
 /* start header + land */
 header {
   position: sticky;
   top: 0;
+<<<<<<< HEAD
 }
 .navbar {
   background-color: transparent;
@@ -208,11 +272,103 @@ header {
 }
 .landing .container {
   margin-top: 250px;
+=======
+  background-color: black;
+  /* opacity: 0.5; */
+}
+header .container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: calc(100% - 40px); /*40 [x بتاعت البادينج*/
+}
+header .container nav {
+  position: relative;
+}
+header .container nav span {
+  text-align: center;
+}
+header .container nav:hover ul {
+  display: block;
+}
+
+header .container nav span svg {
+  color: var(--id-clr);
+  width: 20px;
+
+  font-size: 25px;
+  position: absolute;
+  right: 0;
+}
+header .container nav ul::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-color: transparent transparent var(--sec-color) transparent;
+  border-style: solid solid solid solid;
+  border-width: 10px;
+  position: absolute;
+  right: 0px;
+  top: -19px;
+}
+header .container nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  width: 200px;
+  background-color: var(--sec-color, black);
+  color: var(--id-clr);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: 5px;
+  top: 35px;
+  display: none;
+  z-index: 1000;
+}
+header .container nav ul li {
+  padding: 20px;
+  border-bottom: 1px solid var(--special-head);
+}
+header .container nav ul li:last-child {
+  border-bottom: 0 solid var(--special-head);
+}
+
+header .container nav ul li:hover {
+  padding-left: 30px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+header .container nav ul li:hover a {
+  color: var(--id-clr);
+}
+header .container nav ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+header .container .logo {
+  font-size: 25px;
+  color: var(--sec-col1);
+}
+.landing .container {
+  margin-top: 200px;
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
   padding: 0 20px;
 }
 
 .landing .container h1:first-child {
+<<<<<<< HEAD
   color: var(--orange-color);
+=======
+  color: var(--id-clr);
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 }
 .landing .container h1:nth-child(2) {
   color: var(--special-head);
@@ -224,6 +380,7 @@ header {
 .landing .container button.join {
   border: none;
   cursor: pointer;
+<<<<<<< HEAD
   background-color: var(--orange-color);
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -232,6 +389,21 @@ header {
   -o-border-radius: 5px;
 }
 
+=======
+  background-color: var(--id-clr);
+}
+.landing .container .btn {
+  display: flex;
+}
+.landing .container .btn .icon {
+  background-color: #302e2f;
+  width: 25px;
+  padding-left: 4px;
+}
+.landing .container .btn .icon svg {
+  color: var(--id-clr);
+}
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 .landing .container button.join:active {
   transform: scale(0.95);
 }
@@ -239,9 +411,12 @@ header {
   text-decoration: none;
   color: white;
 }
+<<<<<<< HEAD
 .landing .container button.join a svg {
   color: black;
 }
+=======
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 .land-photo {
   background-image: url(../imgs/landing-photo.jpg);
   background-size: cover;
@@ -251,6 +426,7 @@ header {
   .land-photo {
     background-position: center;
   }
+<<<<<<< HEAD
 }
 
 /*! end header + land */
@@ -269,6 +445,25 @@ header {
   padding-top: 80px;
 }
 .features .container .featur-content .column {
+=======
+  header nav {
+  }
+}
+/*! end header + land */
+
+/*start features */
+.features {
+  background-color: var(--second-clr);
+  padding-bottom: 80px;
+}
+.features .container .featur-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding-top: 80px;
+}
+.features .container .featur-content .col {
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -281,29 +476,47 @@ header {
   line-height: 1.5;
 }
 .features .container .featur-content .feat svg {
+<<<<<<< HEAD
   color: var(--orange-color);
   font-size: 30px;
 }
 
+=======
+  color: var(--id-clr);
+  font-size: 30px;
+}
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 /*end features */
 /* ! __________________________________________________________________*/
 /*start motivate*/
 section.motivate {
+<<<<<<< HEAD
   background-color: var(--services-color);
   /* background-image: url(../imgs/serciveses.svg); */
+=======
+  background-color: var(--sec-col1);
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 }
 section.motivate .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-left: 30px;
   /* margin-right: -20px; تحت التجربه */
+<<<<<<< HEAD
   padding: 0;
+=======
+  padding-right: 20px;
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 }
 .motivate .col .txt {
   padding: 100px 5px 0 100px; /* top right bottom left*/
 }
 .motivate .col .txt h2 {
+<<<<<<< HEAD
   color: var(--orange-color);
+=======
+  color: var(--id-clr);
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
   font-size: 2em;
   text-transform: uppercase;
   margin: 0;
@@ -316,14 +529,20 @@ section.motivate .content {
   display: flex;
 }
 .motivate .col .txt .btn button {
+<<<<<<< HEAD
   background-color: var(--orange-color);
 
+=======
+  background-color: var(--id-clr);
+  position: relative;
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
   padding: 0 6px;
 }
 .motivate .col .txt .btn button a {
   color: white;
 }
 .motivate .col .txt .btn .icon {
+<<<<<<< HEAD
   background-color: var(--gray-color);
   width: 25px;
   position: relative;
@@ -343,6 +562,17 @@ section.motivate .content {
 .motivate .col.image {
   /* padding: 0 0 0 12px; */
   overflow: hidden;
+=======
+  background-color: #474644;
+  width: 25px;
+}
+.motivate .col .txt .btn .icon svg {
+  color: white;
+  padding-left: 5px;
+}
+.motivate .image {
+  /* overflow: hidden; */
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 }
 
 /* media quireis */
@@ -391,11 +621,18 @@ section.motivate .content {
   font-weight: bold;
 }
 .programs .programs-content .col-txt.black {
+<<<<<<< HEAD
   background-color: var(--gray-color);
   /* background-color: #800020; */
 }
 .programs .programs-content .col-txt.orange {
   background-color: var(--orange-color);
+=======
+  background-color: #474644;
+}
+.programs .programs-content .col-txt.orange {
+  background-color: var(--id-clr);
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
 }
 .programs .programs-content .col-img {
   overflow: hidden;
@@ -415,14 +652,22 @@ section.motivate .content {
     text-align: center;
   }
   .programs-content .col-txt.orange._2 {
+<<<<<<< HEAD
     background-color: var(--gray-color);
   }
   .programs-content .col-txt.black._2 {
     background-color: var(--orange-color);
+=======
+    background-color: var(--sec-color);
+  }
+  .programs-content .col-txt.black._2 {
+    background-color: var(--id-clr);
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
   }
 }
 /* end programs */
 
+<<<<<<< HEAD
 /* start mission */
 div.backgrond {
   background-color: var(--section-color);
@@ -561,3 +806,49 @@ footer .container .social .links a svg {
 }
 
 /*! /end footer  */
+=======
+/* start about */
+.about {
+  background-color: var(--second-clr);
+}
+.about .about-content {
+  display: grid;
+  /* !grid-template-columns: repeat(2, minmax(300px, 1fr)); */
+  /*? دي احسن عشان حجم الصوره هيبقي صغير */
+  grid-template-columns: minmax(300px, 1fr) minmax(300px, 2fr);
+  /* gap: 50px; */
+}
+@media (max-width: 768px) {
+  .about .about-content {
+    grid-template-columns: 1fr; /* عمود واحد فقط عند حجم الشاشة الصغير */
+    margin-left: 0;
+    font-size: 1em;
+  }
+}
+.about .about-content .photo-crd {
+  overflow: hidden;
+  text-align: center;
+  width: 250px;
+  height: 400px;
+}
+.about .about-content .photo-crd img {
+  /*! عايز اعمل الصوره نظام الكارت وعنده حواف دائريه  */
+  width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.about .about-content .about-seif {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.2em;
+}
+.about .about-content .about-seif p {
+  margin-bottom: 0;
+}
+/* end about */
+>>>>>>> df780b3c09630bd78b6a9907d4aa8a6052f9cb88
