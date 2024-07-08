@@ -1,6 +1,6 @@
 *.vscode
 design template.jpg
-/webfonts/
+webfonts/
 *.map
-bototstrap
+bootstrap
 all.min
